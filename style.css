@@ -83,55 +83,6 @@ section .title::after {
 }
 
 /* Navbar Styles */
-@media (max-width: 947px) {
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #3498db; /* Changed to #3498db */
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-
-    .navbar .menu.active {
-        left: 0;
-    }
-
-    .navbar .menu li {
-        display: block;
-    }
-
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-        color: #fff; /* Ensure text is visible on blue background */
-    }
-
-    .navbar .menu li a:hover {
-        color: #f0f0f0; /* Slightly lighter on hover for better UX */
-    }
-
-    .menu-btn {
-        display: block;
-        z-index: 999;
-        color: #fff; /* Make sure it's visible against the blue background */
-    }
-
-    .menu-btn i.active:before {
-        content: "\f00d";
-    }
-}
-
-/* Ensure the sticky navbar also uses #3498db */
-.navbar.sticky {
-    padding: 15px 0;
-    background: #3498db;
-}
-
 .navbar {
     position: fixed;
     width: 100%;
@@ -178,7 +129,7 @@ section .title::after {
 }
 
 .navbar .menu li a:hover {
-    color: #3498db;
+    color: #4baced;
 }
 
 .menu-btn {
@@ -193,42 +144,37 @@ section .title::after {
         display: block;
         z-index: 999;
     }
-    
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
     .navbar .menu {
         position: fixed;
         height: 100vh;
         width: 100%;
         left: -100%;
         top: 0;
-        background: #3498db;
+        background: #4baced; /* Changed to match the site's blue color */
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
     }
-    
     .navbar .menu.active {
         left: 0;
     }
-    
     .navbar .menu li {
         display: block;
     }
-    
     .navbar .menu li a {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+        color: #fff; /* Ensure text is white for visibility */
+    }
+    .navbar .menu li a:hover {
+        color: #333; /* Darker color on hover for better visibility */
     }
 }
 
-
-.navbar .menu li a:hover {
-    color: #3498db;
-}
-
-.navbar.sticky .menu li a:hover {
-    color: #fff;
-}
 
 .menu-btn {
     color: #fff;
