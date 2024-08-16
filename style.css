@@ -94,7 +94,7 @@ section .title::after {
 
 .navbar.sticky {
     padding: 15px 0;
-    background: #3498db;
+    background: #4baced;
 }
 
 .navbar .max-width {
@@ -110,7 +110,7 @@ section .title::after {
 }
 
 .navbar .logo a span {
-    color: #3498db;
+    color: #4baced;
     transition: all 0.3s ease;
 }
 
@@ -587,14 +587,14 @@ section .title::after {
 }
 
 footer {
-    background: #111;
+    background: #4baced;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
 }
 
 footer span a {
-    color: #3498db;
+    color: #4a39ff;
     text-decoration: none;
 }
 
@@ -629,7 +629,7 @@ footer span a:hover {
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: #4baced;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
