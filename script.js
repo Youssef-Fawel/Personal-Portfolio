@@ -183,13 +183,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 $(document).ready(function(){
-    // Toggle menu/navbar script
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
 
-    // Sticky navbar on scroll script
     $(window).scroll(function(){
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
