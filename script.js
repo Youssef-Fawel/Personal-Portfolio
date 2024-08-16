@@ -179,6 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
 $(document).ready(function(){
     // Toggle menu/navbar script
     $('.menu-btn').click(function(){

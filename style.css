@@ -151,7 +151,7 @@ section .title::after {
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: #3498db;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -881,6 +881,7 @@ footer span a:hover {
     background: #2980b9;
     transform: translateY(-3px);
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -1079,38 +1080,28 @@ section {
     color: #666;
     margin-bottom: 20px;
 }
+
+
 .download-cv {
     padding: 60px 0;
-    background: #f4f4f4;
 }
 
 .download-cv .title::after {
     content: "Know Me";
-    display: block;
-    font-size: 16px;
-    color: #3498db;
-    margin-top: 5px;
 }
 
 .download-cv .download-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .download-cv .column {
-    width: 48%;
-}
-
-.download-cv .column.left {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
     background: #fff;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.download-cv .column.right {
-    background: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -1123,12 +1114,12 @@ section {
     text-decoration: none;
     border-radius: 6px;
     transition: background 0.3s ease;
+    margin-top: 20px;
 }
 
 .download-cv .download-button:hover {
     background: #2980b9;
 }
-
 
 .download-cv .personal-info {
     margin-top: 20px;
@@ -1143,7 +1134,8 @@ section {
 .download-cv .info-item i {
     font-size: 24px;
     color: #3498db;
-    margin-right: 10px;
+    margin-right: 15px;
+    width: 24px;
 }
 
 .download-cv .info-item .info {
@@ -1159,19 +1151,17 @@ section {
     color: #666;
 }
 
-.download-cv .socials {
+.download-cv .social-links {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.download-cv .socials a {
-    color: #3498db;
-    font-size: 24px;
-    margin-right: 10px;
-    transition: color 0.3s ease;
-}
 
-.download-cv .socials a:hover {
-    color: #2980b9;
+@media (max-width: 767px) {
+    .download-cv .column {
+        padding: 20px;
+    }
 }
 
 
@@ -1262,7 +1252,6 @@ section {
     background-color: #0056b3;
 }
 #contact {
-    background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
 }
@@ -1328,8 +1317,8 @@ section {
 .submit-btn:hover {
     background-color: #0056b3;
 }
+
 .contact {
-    background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
 }
@@ -1459,9 +1448,7 @@ section {
 .socials a:hover {
     color: #0056b3;
 }
-/* ... (keep all your existing CSS above) ... */
 
-/* Responsive Design Updates */
 
 @media (max-width: 1300px) {
     .home .max-width {
@@ -1595,7 +1582,6 @@ section {
     }
 }
 
-/* Additional Responsive Adjustments */
 
 .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
