@@ -82,6 +82,7 @@ section .title::after {
     transform: translateX(-50%);
 }
 
+/* Navbar Styles */
 .navbar {
     position: fixed;
     width: 100%;
@@ -103,7 +104,7 @@ section .title::after {
 }
 
 .navbar .logo a {
-    color: #fff;
+    color: #ffffff;
     font-size: 35px;
     font-weight: 600;
 }
@@ -111,10 +112,6 @@ section .title::after {
 .navbar .logo a span {
     color: #3498db;
     transition: all 0.3s ease;
-}
-
-.navbar.sticky .logo a span {
-    color: #fff;
 }
 
 .navbar .menu li {
@@ -130,6 +127,51 @@ section .title::after {
     margin-left: 25px;
     transition: color 0.3s ease;
 }
+
+.navbar .menu li a:hover {
+    color: #3498db;
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar .menu.active {
+        left: 0;
+    }
+    
+    .navbar .menu li {
+        display: block;
+    }
+    
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
 
 .navbar .menu li a:hover {
     color: #3498db;
