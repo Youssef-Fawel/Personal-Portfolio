@@ -106,7 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "An e-commerce platform specializing in products for home construction and renovation. It includes features such as product listings, shopping cart functionality, and user accounts. The website is developed using HTML5, CSS3, JavaScript, PHP, and SQL for a complete shopping experience.",
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "SQL"],
             link: "#"
+        },
+        11: {
+            title: "Task Management System",
+            image: "Photos/Task.png",
+            description: "A comprehensive tool for managing user tasks with features like adding, updating, and deleting tasks, session management, priority settings, and automated reminders for tasks due the next day. The system is built using HTML5, CSS3, JavaScript, PHP, MySQL, and Bootstrap for efficient task handling and a user-friendly interface.",
+            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+            link: "#"
         }
+        
     };
 
     const modal = document.getElementById('project-modal');

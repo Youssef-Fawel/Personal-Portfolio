@@ -82,7 +82,7 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-/* Navbar Styles */
+
 .navbar {
     position: fixed;
     width: 100%;
@@ -172,6 +172,17 @@ section .title::after {
     }
     .navbar .menu li a:hover {
         color: #fff; 
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; 
+    }
+
+    .menu-btn {
+        padding: 10px 15px; 
+        background-color: #4baced; 
     }
 }
 
@@ -1609,13 +1620,11 @@ section {
     }
 }
 
-/* Ensure images are responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Improve readability on smaller screens */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
@@ -1630,7 +1639,6 @@ img {
     }
 }
 
-/* Adjust button sizes for better touch targets on mobile */
 @media (max-width: 480px) {
     .btn, .filter-btn, .view-project, .submit-btn {
         padding: 12px 20px;
