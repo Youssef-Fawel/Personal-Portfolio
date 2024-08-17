@@ -139,7 +139,7 @@ section .title::after {
     display: none;
 }
 
-.menu-li {
+.menu-ul {
         background: #4baced;
 }
 
