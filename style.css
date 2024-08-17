@@ -228,7 +228,7 @@ section .title::after {
 
 .home {
     display: flex;
-    background: linear-gradient(to right, #295179, #0e7eed); 
+    background: linear-gradient(to right,#063c71, #4a9ef1); 
     height: 100vh;
     color: #fff;
     min-height: 500px;
