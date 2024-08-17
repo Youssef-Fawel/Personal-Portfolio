@@ -101,7 +101,6 @@ section .title::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-        background: #4baced;
 }
 
 .navbar .logo a {
@@ -138,6 +137,10 @@ section .title::after {
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+.menu {
+        background: #4baced;
 }
 
 @media (max-width: 947px) {
