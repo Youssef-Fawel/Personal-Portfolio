@@ -82,21 +82,6 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-.menu-btn {
-    color: #4baced; 
-}
-
-.navbar {
-    background-color: #4baced; 
-}
-
-.navbar.sticky {
-    background-color: #4baced; 
-}
-
-.menu-btn i.active {
-    color: #4baced; 
-}
 
 .navbar {
     position: fixed;
