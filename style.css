@@ -218,10 +218,14 @@ section .title::after {
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
+    background-color: #4baced;
+
 }
 
 .scroll-up-btn:hover {
     filter: brightness(90%);
+    background-color: #4baced;
+
 }
 
 
