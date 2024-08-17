@@ -139,9 +139,6 @@ section .title::after {
     display: none;
 }
 
-.menu-ul {
-        background: #4baced;
-}
 
 @media (max-width: 947px) {
     .menu-btn {
@@ -183,6 +180,11 @@ section .title::after {
     .menu {
         flex-direction: column; 
         background-color: #4baced;
+    }
+    
+@media (max-width: 768px) {
+    .menu-ul {
+        background: #4baced; 
     }
 
     .menu-btn {
