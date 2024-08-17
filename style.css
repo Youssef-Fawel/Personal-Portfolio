@@ -181,11 +181,6 @@ section .title::after {
         flex-direction: column; 
         background-color: #4baced;
     }
-    
-@media (max-width: 768px) {
-    .menu-ul {
-        background: #4baced; 
-    }
 
     .menu-btn {
         padding: 10px 15px; 
@@ -224,18 +219,16 @@ section .title::after {
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
-
 }
 
 .scroll-up-btn:hover {
     filter: brightness(90%);
-
 }
 
 
 .home {
     display: flex;
-    background: linear-gradient(to right, #003366, #0066cc); 
+    background: linear-gradient(to right, #295179, #0e7eed); 
     height: 100vh;
     color: #fff;
     min-height: 500px;
