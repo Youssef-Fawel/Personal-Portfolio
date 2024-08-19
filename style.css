@@ -92,6 +92,10 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
+.navbar-collapse {
+    background-color: #4baced; 
+}
+
 .navbar.sticky {
     padding: 15px 0;
     background: #4baced;
