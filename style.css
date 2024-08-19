@@ -94,7 +94,7 @@ section .title::after {
 
 @media (max-width: 767px) {
     .navbar a {
-        color: #4baced; 
+        color: #4baced !important; 
     }
 }
 
