@@ -94,7 +94,9 @@ section .title::after {
 
 @media (max-width: 767px) {
     .menu {
-        background-color: blue; 
+        background-color: #4baced !important; 
+        color: #4baced !important;
+
     }
     .menu a {
         color: white;
