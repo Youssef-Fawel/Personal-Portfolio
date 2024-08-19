@@ -93,8 +93,11 @@ section .title::after {
 }
 
 @media (max-width: 767px) {
-    .navbar-menu  {
-        color: #4baced !important; 
+    .menu {
+        background-color: blue; 
+    }
+    .menu a {
+        color: white;
     }
 }
 
