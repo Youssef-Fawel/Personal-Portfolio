@@ -92,9 +92,6 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.navbar-collapse {
-    background-color: #4baced; 
-}
 
 .navbar.sticky {
     padding: 15px 0;
@@ -191,6 +188,19 @@ section .title::after {
     }
 }
 
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #4baced !important; 
+    }
+    
+    .navbar {
+        background-color: #4baced !important;
+    }
+    
+    .navbar-nav {
+        background-color: #4baced !important; 
+    }
+}
 
 .menu-btn {
     color: #fff;
