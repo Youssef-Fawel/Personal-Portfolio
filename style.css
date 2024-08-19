@@ -92,13 +92,10 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.navbar-collapse {
-    background-color: #4baced;
-}
-
-.navbar-nav .nav-link {
-    background-color: transparent; 
-    color: white; 
+@media (max-width: 767px) {
+    .navbar a {
+        color: blue; 
+    }
 }
 
 
