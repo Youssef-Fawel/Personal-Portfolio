@@ -42,77 +42,77 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "Photos/Einstein_Tribute.png",
             description: "An interactive web tribute dedicated to Albert Einstein, showcasing his life, achievements, and lasting impact on science. The site features dynamic animations, including a unique intro with Einstein's famous E=mc² equation, and sections highlighting his qualities, achievements, and legacy.",
             technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-            link: "#"
+            link: ""
         },
         2: {
             title: "Temperature Conversion Program",
             image: "Photos/Temperature.png",
             description: "A web-based tool designed to convert temperatures between Celsius, Fahrenheit, and Kelvin. Users can input a temperature and select the unit they want to convert from and to, with real-time conversion results.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
-            link: "#"
+            link: ""
         },
         3: {
             title: "Guessing Game",
             image: "Photos/Guessing.png",
             description: "An interactive game where the user tries to guess a randomly generated number between 1 and 100. The game provides feedback on whether the guess is too high or too low and tracks the number of attempts until the user guesses correctly.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
-            link: "#"
+            link: ""
         },
         4: {
             title: "Contact Management System",
             image: "Photos/Contact.png",
             description: "A web-based system that allows users to add, edit, and delete contacts. The system features a form for inputting contact details such as name, email, and phone number. Contacts are stored in the browser's localStorage for persistent data management, and users can view and manage their contact list easily.",
             technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-            link: "#"
+            link: ""
         },
         5: {
             title: "Sudoku Solver",
             image: "Photos/Sudoku.png",
             description: "An application that solves Sudoku puzzles automatically. Users can input the numbers of a Sudoku puzzle into a grid, and the solver uses algorithms to fill in the remaining cells to complete the puzzle. This project demonstrates problem-solving techniques and algorithmic thinking.",
             technologies: ["Java"],
-            link: "#"
+            link: ""
         },
         6: {
             title: "Web Scraping Program",
             image: "Photos/Scraping.png",
             description: "A Python tool that extracts data from e-commerce websites. It scrapes product details such as names, prices, and ratings, and saves the data in a CSV file for further analysis or processing. This project highlights the use of web scraping techniques for data collection.",
             technologies: ["Python"],
-            link: "#"
+            link: ""
         },
         7: {
             title: "Calculator Web Application",
             image: "Photos/calculator.png",
             description: "A responsive web calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator features a user-friendly interface and handles various edge cases to ensure accurate calculations.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
-            link: "#"
+            link: ""
         },
         8: {
             title: "Healthy Eating Website",
             image: "Photos/healthy-eating-website.png",
             description: "A website dedicated to promoting healthy living through nutrition and exercise. It features recipes for balanced meals, sports routines for physical fitness, and tips for maintaining a healthy lifestyle. The site is built with HTML, CSS, JavaScript, PHP, and SQL for dynamic content management.",
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "SQL"],
-            link: "#"
+            link: ""
         },
         9: {
             title: "EcoSmartHome Website",
             image: "Photos/ecosmarthome.png",
             description: "A website focused on sustainable and smart home solutions. It provides information about eco-friendly technologies, smart home devices, and energy-saving practices. The site is designed with HTML, CSS, and JavaScript to offer an engaging user experience and promote green living.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
-            link: "#"
+            link: ""
         },
         10: {
             title: "E-commerce Website for Home Building",
             image: "Photos/ecommerce-home-building.png",
             description: "An e-commerce platform specializing in products for home construction and renovation. It includes features such as product listings, shopping cart functionality, and user accounts. The website is developed using HTML5, CSS3, JavaScript, PHP, and SQL for a complete shopping experience.",
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "SQL"],
-            link: "#"
+            link: ""
         },
         11: {
             title: "Task Management System",
             image: "Photos/Task.png",
             description: "A comprehensive tool for managing user tasks with features like adding, updating, and deleting tasks, session management, priority settings, and automated reminders for tasks due the next day. The system is built using HTML5, CSS3, JavaScript, PHP, MySQL, and Bootstrap for efficient task handling and a user-friendly interface.",
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
-            link: "#"
+            link: ""
         }
         
     };
