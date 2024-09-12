@@ -189,32 +189,35 @@ $(document).ready(function(){
     });
 });
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.project-card');
-const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-    });
-}
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
     showSlide(currentSlide);
-}
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-}
+    document.getElementById('next-slide').addEventListener('click', nextSlide);
+    document.getElementById('prev-slide').addEventListener('click', prevSlide);
 
-showSlide(currentSlide);
+    setInterval(nextSlide, 5000); 
+});
 
-setInterval(nextSlide, 5000);
-
-document.getElementById('next-slide').addEventListener('click', nextSlide);
-document.getElementById('prev-slide').addEventListener('click', prevSlide);
 
     const currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
