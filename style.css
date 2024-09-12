@@ -828,6 +828,7 @@ footer span a:hover {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
 .project-slide {
     position: relative;
 }
@@ -854,6 +855,29 @@ footer span a:hover {
 }
 
 .nav-button:hover {
+    background-color: #0056b3; 
+}
+
+.project-nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10; 
+}
+
+.project-nav-buttons button {
+    background-color: #007bff; 
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.project-nav-buttons button:hover {
     background-color: #0056b3; 
 }
 
