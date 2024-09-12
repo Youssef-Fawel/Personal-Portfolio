@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (project) {
                 modalTitle.textContent = project.title;
                 modalImage.src = project.image;
-                modalDescription.textContent = project.description;
+                modal Description.textContent = project.description;
                 modalTechnologies.textContent = `Technologies used: ${project.technologies.join(', ')}`;
                 modal.style.display = "block";
             }
@@ -172,52 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-});
-
-$(document).ready(function(){
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? 'block' : 'none';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    showSlide(currentSlide);
-
-    document.getElementById('next-slide').addEventListener('click', nextSlide);
-    document.getElementById('prev-slide').addEventListener('click', prevSlide);
-
-    setInterval(nextSlide, 5000); 
-});
-
 
     const currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
+});
