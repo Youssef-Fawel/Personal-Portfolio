@@ -861,21 +861,18 @@ footer span a:hover {
 }
 
 .project-nav-buttons {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10; 
+    justify-content: space-between; 
+    margin-top: 20px; 
+    padding: 10px 0; 
 }
 
 .project-nav-buttons button {
     background-color: #007bff; 
     border: none;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
