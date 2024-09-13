@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Navbar and scroll functionality
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         const scrollUpBtn = document.querySelector('.scroll-up-btn');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle("active");
     });
 
+    // Typing animation
     new Typed(".typing", {
         strings: ["Software Engineering Student", "Web Developer", "Problem Solver", "Tech Enthusiast"],
         typeSpeed: 100,
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true
     });
 
+    // Project details
     const projectDetails = {
         1: {
             title: "Albert Einstein Tribute",
@@ -105,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Modal functionality
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
@@ -137,9 +141,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Project slider functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.project-card');
     const totalSlides = slides.length;
+    const nextButton = document.getElementById('next-slide');
+    const prevButton = document.getElementById('prev-slide');
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -152,10 +159,37 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
 
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Initialize the first slide
     showSlide(currentSlide);
 
-    setInterval(nextSlide, 5000);
+    // Add event listeners to the buttons
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
 
+    // Auto-rotate slides
+    const autoRotateInterval = 5000; // 5 seconds
+    let autoRotate = setInterval(nextSlide, autoRotateInterval);
+
+    // Pause auto-rotation when user interacts with the slider
+    function pauseAutoRotate() {
+        clearInterval(autoRotate);
+    }
+
+    function resumeAutoRotate() {
+        autoRotate = setInterval(nextSlide, autoRotateInterval);
+    }
+
+    nextButton.addEventListener('mouseenter', pauseAutoRotate);
+    nextButton.addEventListener('mouseleave', resumeAutoRotate);
+    prevButton.addEventListener('mouseenter', pauseAutoRotate);
+    prevButton.addEventListener('mouseleave', resumeAutoRotate);
+
+    // Project filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -172,8 +206,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Update copyright year
+    const currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
 });
 
+// jQuery for menu button (if you're using jQuery)
 $(document).ready(function(){
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
@@ -188,33 +227,3 @@ $(document).ready(function(){
         }
     });
 });
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.project-card');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-}
-
-showSlide(currentSlide);
-
-setInterval(nextSlide, 5000);
-
-document.getElementById('next-slide').addEventListener('click', nextSlide);
-document.getElementById('prev-slide').addEventListener('click', prevSlide);
-
-    const currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
