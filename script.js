@@ -141,16 +141,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Project slider functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.project-card');
     const totalSlides = slides.length;
     const nextButton = document.getElementById('next-slide');
     const prevButton = document.getElementById('prev-slide');
+    const projectSlide = document.querySelector('.project-slide');
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? 'block' : 'none';
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
         });
     }
 
@@ -166,6 +170,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize the first slide
     showSlide(currentSlide);
+
+    // Make sure buttons are visible
+    nextButton.style.display = 'block';
+    prevButton.style.display = 'block';
+
+    // Position buttons
+    projectSlide.style.position = 'relative';
+    
+    const buttonStyle = `
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 10;
+    `;
+    
+    prevButton.style.cssText = buttonStyle + 'left: 10px;';
+    nextButton.style.cssText = buttonStyle + 'right: 10px;';
 
     // Add event listeners to the buttons
     nextButton.addEventListener('click', nextSlide);
