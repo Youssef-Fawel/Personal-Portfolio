@@ -831,6 +831,8 @@ footer span a:hover {
 
 .project-slide {
     position: relative;
+    height: auto; 
+    overflow: visible; 
 }
 
 .nav-button {
@@ -861,6 +863,7 @@ footer span a:hover {
 .project-nav-buttons {
     position: absolute;
     top: 50%;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -875,10 +878,13 @@ footer span a:hover {
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+    opacity: 0.8; 
 }
 
 .project-nav-buttons button:hover {
     background-color: #0056b3; 
+    opacity: 1;
 }
 
 .view-project {
@@ -895,6 +901,9 @@ footer span a:hover {
     background: #2980b9;
 }
 
+#prev-slide, #next-slide {
+    display: block; 
+}
 .modal {
     display: none;
     position: fixed;
