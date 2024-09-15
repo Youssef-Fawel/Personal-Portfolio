@@ -835,42 +835,6 @@ footer span a:hover {
     overflow: visible; 
 }
 
-.projects-content {
-    position: relative;
-    padding-bottom: 60px; 
-}
-
-.project-nav-buttons {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.project-nav-buttons button {
-    background-color: #3498db;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s ease;
-}
-
-.project-nav-buttons button:hover {
-    background-color: #2980b9; 
-}
-
-#prev-slide, #next-slide {
-    display: inline-block;
-}
-
-
 .view-project {
     background: #3498db;
     color: #fff;
