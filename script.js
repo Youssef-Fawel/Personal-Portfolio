@@ -179,45 +179,12 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.style.display = 'block';
     prevButton.style.display = 'block';
 
-    // Position buttons
-    projectSlide.style.position = 'relative';
-    
-    const buttonStyle = `
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        z-index: 10;
-    `;
-    
-    prevButton.style.cssText = buttonStyle + 'left: 10px;';
-    nextButton.style.cssText = buttonStyle + 'right: 10px;';
 
-    // Add event listeners to the buttons
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
 
     // Auto-rotate slides
-    const autoRotateInterval = 5000; // 5 seconds
+    const autoRotateInterval = 3000; // 3 seconds
     let autoRotate = setInterval(nextSlide, autoRotateInterval);
 
-    // Pause auto-rotation when user interacts with the slider
-    function pauseAutoRotate() {
-        clearInterval(autoRotate);
-    }
-
-    function resumeAutoRotate() {
-        autoRotate = setInterval(nextSlide, autoRotateInterval);
-    }
-
-    nextButton.addEventListener('mouseenter', pauseAutoRotate);
-    nextButton.addEventListener('mouseleave', resumeAutoRotate);
-    prevButton.addEventListener('mouseenter', pauseAutoRotate);
-    prevButton.addEventListener('mouseleave', resumeAutoRotate);
 
     // Project filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
