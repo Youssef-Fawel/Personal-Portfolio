@@ -847,13 +847,13 @@ footer span a:hover {
 }
 
 .prev {
-    left: 10px;
-    background-color : #007bff;
+    left: 30px;
+    color : blue;
 }
 
 .next {
-    right: 10px;
-    background-color : #007bff;
+    right: 30px;
+    color : blue;
 }
 
 .nav-button:hover {
