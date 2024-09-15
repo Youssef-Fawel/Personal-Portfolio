@@ -837,9 +837,8 @@ footer span a:hover {
 
 .nav-button {
     position: absolute;
-    top: 50%;
+    bottom: 50px;
     transform: translateY(-50%);
-    background-color: #007bff; 
     color: white;
     border: none;
     padding: 10px;
