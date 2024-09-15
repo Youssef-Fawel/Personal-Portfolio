@@ -835,35 +835,10 @@ footer span a:hover {
     overflow: visible; 
 }
 
-.nav-button {
-    position: absolute;
-    transform: translateY(-50%);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.prev {
-    left: 30px;
-    color : blue;
-}
-
-.next {
-    right: 30px;
-    color : blue;
-}
-
-.nav-button:hover {
-    background-color: #0056b3; 
-}
-
 .project-nav-buttons {
     position: relative;
     display: flex;
-    justify-content: centre;
+    justify-content: center;
     margin-top: 20px;
     padding: 10px 0;
 }
