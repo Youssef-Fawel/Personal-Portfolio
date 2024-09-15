@@ -145,45 +145,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.project-card');
-    const totalSlides = slides.length;
-    const nextButton = document.getElementById('next-slide');
-    const prevButton = document.getElementById('prev-slide');
-    const projectSlide = document.querySelector('.project-slide');
+let currentSlide = 0;
+const slides = document.querySelectorAll('.project-card');
+const totalSlides = slides.length;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    }
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
+}
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    // Initialize the first slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
+}
 
-    // Make sure buttons are visible
-    nextButton.style.display = 'block';
-    prevButton.style.display = 'block';
+// Initialize the first slide
+showSlide(currentSlide);
 
-
-
-    // Auto-rotate slides
-    const autoRotateInterval = 3000; // 3 seconds
-    let autoRotate = setInterval(nextSlide, autoRotateInterval);
+// Auto-rotate slides
+const autoRotateInterval = 3000; // 3 seconds
+setInterval(nextSlide, autoRotateInterval);
 
 
     // Project filtering
