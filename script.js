@@ -168,7 +168,7 @@ function nextSlide() {
 showSlide(currentSlide);
 
 // Auto-rotate slides
-const autoRotateInterval = 3000; // 3 seconds
+const autoRotateInterval = 2000; // 2 seconds
 setInterval(nextSlide, autoRotateInterval);
 
 
