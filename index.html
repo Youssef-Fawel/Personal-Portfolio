@@ -402,27 +402,31 @@
                     <p>I'm always open to new opportunities and collaborations. Feel free to reach out to me using the form below or through my social media profiles.</p>
                 </div>
                 <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </form>
-                </div>
+                    
+                <div class="text">Message me</div>
+                <form name="contact" method="POST" data-netlify="true">
+        <div class="fields">
+            <div class="field name">
+                <input type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="field email">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="field">
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="field textarea">
+            <textarea name="message" cols="30" rows="10" placeholder="Message.." required></textarea>
+        </div>
+        <div class="button-area">
+            <button type="submit">Send message</button>
+        </div>
+        <!-- Optional hidden field to help prevent spam -->
+        <input type="hidden" name="form-name" value="contact">
+    </form>
+</div>
+
             </div>
         </div>
     </section>
