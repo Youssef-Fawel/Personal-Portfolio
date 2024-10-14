@@ -1226,6 +1226,8 @@ section {
     position: relative;
 }
 
+
+
 .project-nav-buttons {
     position: absolute;
     top: 50%;
@@ -1233,22 +1235,37 @@ section {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 10; *
+    z-index: 10;
 }
 
-.project-nav-buttons button {
-    background-color: #007bff
+.project-nav-buttons .nav-button {
+    background-color: #007bff;
     border: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.project-nav-buttons button:hover {
+.project-nav-buttons #prevProject {
+    transform: translateX(-150px);
+}
+
+.project-nav-buttons #nextProject {
+    transform: translateX(1200px);
+    position: absolute;
+
+}
+
+.project-nav-buttons .nav-button:hover {
     background-color: #0056b3;
 }
+
+
+
+
 
 .filter-btn.active, .filter-btn:hover {
     background-color: #007bff;
