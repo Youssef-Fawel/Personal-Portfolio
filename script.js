@@ -1,39 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Navbar and scroll functionality
-    window.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
         const scrollUpBtn = document.querySelector('.scroll-up-btn');
         navbar.classList.toggle("sticky", window.scrollY > 20);
         scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
 
-    document.querySelector('.scroll-up-btn').addEventListener('click', function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelector('.scroll-up-btn').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    document.querySelectorAll('.navbar .menu li a').forEach(function(item) {
-        item.addEventListener('click', function(e) {
+    document.querySelectorAll('.navbar .menu li a').forEach(function (item) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 
-    document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.menu-btn').addEventListener('click', function () {
         document.querySelector('.navbar .menu').classList.toggle("active");
         this.classList.toggle("active");
     });
 
-    // Typing animation
     try {
         new Typed(".typing", {
-            strings: ["Software Engineering Student", "Web Developer", "Problem Solver", "Tech Enthusiast"],
+            strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
         });
 
         new Typed(".typing-2", {
-            strings: ["Software Engineer Student", "Web Developer", "Problem Solver", "Tech Enthusiast"],
+            strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Error initializing Typed.js:", error);
     }
 
-    const projectDetails = {        
+    const projectDetails = {
         1: {   
             title: "Albert Einstein Tribute",             
             image: "Photos/Einstein_Tribute.png",             
@@ -109,10 +110,15 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "Photos/Task.png",            
             description: "A comprehensive tool for managing user tasks with features like adding, updating, and deleting tasks, session management, priority settings, and automated reminders for tasks due the next day. The system is built using HTML5, CSS3, JavaScript, PHP, MySQL, and Bootstrap for efficient task handling and a user-friendly interface.",         
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"]   
-        }   
-    };
+        },       
+        12: {
+            title: "Plateforme d'e-learning (Coming Soon)",
+            image: "Photos/Coming_soon.jpg", 
+            description: "Une plateforme de gestion d'apprentissage en ligne permettant aux administrateurs de gérer les formations, aux formateurs de créer et suivre le progrès des apprenants, et aux apprenants d'accéder aux contenus pédagogiques et aux évaluations. Le système inclut un tableau de bord personnalisé, des forums de discussion, et un suivi détaillé des progrès.",
+            technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Amazon S3"]
+        },
+    };     
 
-    // Modal functionality
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
@@ -145,34 +151,69 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.project-card');
-const totalSlides = slides.length;
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.project-card');
+    const totalSlides = slides.length;
+    const prevBtn = document.getElementById('prevProject');
+    const nextBtn = document.getElementById('nextProject');
+    let slideInterval;
+    let resumeTimeout;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        if (i === index) {
-            slide.style.display = 'block';
-        } else {
-            slide.style.display = 'none';
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function startAutoRotation() {
+        slideInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoRotation() {
+        clearInterval(slideInterval);
+    }
+
+    function resetAutoRotation() {
+        clearTimeout(resumeTimeout);
+        stopAutoRotation();
+        resumeTimeout = setTimeout(startAutoRotation, 5000);
+    }
+
+    function handleManualNavigation(direction) {
+        stopAutoRotation();
+        direction === 'next' ? nextSlide() : prevSlide();
+        resetAutoRotation();
+    }
+
+    showSlide(currentSlide);
+    startAutoRotation();
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => handleManualNavigation('next'));
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => handleManualNavigation('prev'));
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            handleManualNavigation('next');
+        } else if (e.key === 'ArrowLeft') {
+            handleManualNavigation('prev');
         }
     });
-}
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-}
-
-// Initialize the first slide
-showSlide(currentSlide);
-
-// Auto-rotate slides
-const autoRotateInterval = 2000; // 2 seconds
-setInterval(nextSlide, autoRotateInterval);
-
-
-    // Project filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -190,11 +231,9 @@ setInterval(nextSlide, autoRotateInterval);
         });
     });
 
-    // Update copyright year
     const currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
 
-    // Implement lazy loading for project images
     const lazyImages = document.querySelectorAll('img[data-src]');
     const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -209,52 +248,15 @@ setInterval(nextSlide, autoRotateInterval);
 
     lazyImages.forEach(img => lazyLoadObserver.observe(img));
 
-    // Keyboard navigation for project slider
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
-            nextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            prevSlide();
-        }
-    });
-
-    // Smooth scrolling for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
-});
-
-// jQuery for menu button (if you're using jQuery)
-$(document).ready(function(){
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
-        }
-    });
-});
-
-// Vanilla JavaScript alternative for jQuery functionality
-document.querySelector('.menu-btn').addEventListener('click', function() {
-    document.querySelector('.navbar .menu').classList.toggle("active");
-    this.querySelector('i').classList.toggle("active");
-});
-
-window.addEventListener('scroll', function() {
-    if (this.scrollY > 20) {
-        document.querySelector('.navbar').classList.add("sticky");
-    } else {
-        document.querySelector('.navbar').classList.remove("sticky");
-    }
 });
