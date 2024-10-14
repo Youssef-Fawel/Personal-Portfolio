@@ -56,7 +56,7 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="Photos/1.jpg" alt="Youssef Fawel">
+                    <img src="Photos/Me.png" alt="Youssef Fawel">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Youssef and I'm a <span class="typing-2"></span></div>
@@ -146,6 +146,10 @@
         <div class="max-width">
             <h2 class="title">My Projects</h2>
             <div class="projects-content">
+                <div class="project-nav-buttons">
+                    <button id="prevProject" class="nav-button">&lt; Previous</button>
+                    <button id="nextProject" class="nav-button">Next &gt;</button>
+                </div>
                 <div class="project-slide">
                     <div class="slide active">
                         <!-- Project 1 -->
@@ -330,7 +334,24 @@
                             <button class="view-project" data-id="11">Learn More</button>
                         </div>
                     </div>
-                </div>
+                    <!-- Project 12 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="Photos/Coming_soon.jpg" alt="Plateforme d'e-learning">
+                        </div>
+                        <div class="project-info">
+                            <h3>Plateforme d'e-learning (Coming Soon)</h3>
+                            <p>Une plateforme de gestion d'apprentissage en ligne permettant aux administrateurs de gérer les formations, aux formateurs de créer et suivre le progrès des apprenants, et aux apprenants d'accéder aux contenus pédagogiques et aux évaluations. Le système inclut un tableau de bord personnalisé, des forums de discussion, et un suivi détaillé des progrès.</p>
+                            <div class="project-tags">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>MongoDB</span>
+                                <span>JWT</span>
+                                <span>Amazon S3</span>
+                            </div>
+                            <button class="view-project" data-id="12">En savoir plus</button>
+                        </div>                        
             </div>
         </div>
     </section>
@@ -415,7 +436,6 @@
         <div class="button-area">
             <button type="submit">Send message</button>
         </div>
-        <!-- Optional hidden field to help prevent spam -->
         <input type="hidden" name="form-name" value="contact">
     </form>
 </div>
