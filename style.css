@@ -84,12 +84,21 @@ section .title::after {
 
 
 .navbar {
-    position: fixed;
-    width: 100%;
+    position: relative;
     z-index: 999;
-    padding: 30px 0;
-    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    z-index: 100;
     transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 767px) {
@@ -101,15 +110,6 @@ section .title::after {
     .menu a {
         color: white;
     }
-}
-
-
-.navbar.sticky {
-    padding: 15px 0;
-    background: #4baced;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
 }
 
 .navbar .max-width {
