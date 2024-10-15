@@ -27,11 +27,8 @@ menuBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
     menuBtn.classList.toggle("active");
 });
-    document.querySelector('.menu-btn').addEventListener('click', function () {
-        document.querySelector('.navbar .menu').classList.toggle("active");
-        this.classList.toggle("active");
-    });
-
+    
+    
     try {
         new Typed(".typing", {
             strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
