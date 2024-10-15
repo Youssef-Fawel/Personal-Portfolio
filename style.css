@@ -1115,21 +1115,21 @@ section {
 }
 
 
-.download-cv {
+.view-cv {
     padding: 60px 0;
 }
 
-.download-cv .title::after {
+.view-cv .title::after {
     content: "Know Me";
 }
 
-.download-cv .download-content {
+.view-cv .view-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.download-cv .column {
+.view-cv .column {
     width: 100%;
     max-width: 600px;
     margin-bottom: 30px;
@@ -1139,7 +1139,7 @@ section {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.download-cv .download-button {
+.view-cv .view-button {
     display: inline-block;
     padding: 10px 20px;
     background: #3498db;
@@ -1150,41 +1150,41 @@ section {
     margin-top: 20px;
 }
 
-.download-cv .download-button:hover {
+.view-cv .view-button:hover {
     background: #2980b9;
 }
 
-.download-cv .personal-info {
+.view-cv .personal-info {
     margin-top: 20px;
 }
 
-.download-cv .info-item {
+.view-cv .info-item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.download-cv .info-item i {
+.view-cv .info-item i {
     font-size: 24px;
     color: #3498db;
     margin-right: 15px;
     width: 24px;
 }
 
-.download-cv .info-item .info {
+.view-cv .info-item .info {
     font-size: 18px;
 }
 
-.download-cv .info-item .head {
+.view-cv .info-item .head {
     font-weight: 500;
     color: #333;
 }
 
-.download-cv .info-item .sub-title {
+.view-cv .info-item .sub-title {
     color: #666;
 }
 
-.download-cv .social-links {
+.view-cv .social-links {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -1192,7 +1192,7 @@ section {
 
 
 @media (max-width: 767px) {
-    .download-cv .column {
+    .view-cv .column {
         padding: 20px;
     }
 }
