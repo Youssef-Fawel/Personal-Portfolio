@@ -92,16 +92,6 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-
-.navbar.sticky {
-    padding: 15px 0;
-    background: #4baced;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-
 @media (max-width: 767px) {
     .menu {
         background-color: #4baced !important; 
@@ -111,6 +101,15 @@ section .title::after {
     .menu a {
         color: white;
     }
+}
+
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: #4baced;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .max-width {
@@ -159,36 +158,22 @@ section .title::after {
 @media (max-width: 947px) {
     .menu-btn {
         display: block;
-        z-index: 999;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1000;
+        cursor: pointer;
+        color: #fff; 
+        font-size: 24px; 
+        padding: 10px;
     }
-    .menu-btn i.active:before {
-        content: "\f00d";
-    }
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #4baced; 
-        text-align: center;
-        padding-top: 80px;
+
+    .menu-btn i {
         transition: all 0.3s ease;
     }
-    .navbar .menu.active {
-        left: 0;
-    }
-    .navbar .menu li {
-        display: block;
-    }
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-        color: #fff; 
-    }
-    .navbar .menu li a:hover {
-        color: #fff; 
+
+    .menu-btn.active i:before {
+        content: "\f00d"; 
     }
 }
 
@@ -639,66 +624,6 @@ footer span a:hover {
     }
 }
 
-@media (max-width: 947px) {
-    .menu-btn {
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before {
-        content: "\f00d";
-    }
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #4baced;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active {
-        left: 0;
-    }
-    .navbar .menu li {
-        display: block;
-    }
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .home .home-content .text-2 {
-        font-size: 70px;
-    }
-    .home .home-content .text-3 {
-        font-size: 35px;
-    }
-    .home .home-content a {
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-    .max-width {
-        max-width: 930px;
-    }
-    .about .about-content .column {
-        width: 100%;
-    }
-    .about .about-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right {
-        flex: 100%;
-    }
-    .skills .skills-content .column,
-    .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-}
 
 @media (max-width: 690px) {
     .max-width {
@@ -1557,69 +1482,7 @@ section {
     }
 }
 
-@media (max-width: 947px) {
-    .menu-btn {
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before {
-        content: "\f00d";
-    }
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active {
-        left: 0;
-    }
-    .navbar .menu li {
-        display: block;
-    }
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .home .home-content .text-2 {
-        font-size: 70px;
-    }
-    .home .home-content .text-3 {
-        font-size: 35px;
-    }
-    .home .home-content a {
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-    .max-width {
-        max-width: 930px;
-    }
-    .about .about-content .column {
-        width: 100%;
-    }
-    .about .about-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right {
-        flex: 100%;
-    }
-    .skills .skills-content .column,
-    .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-    .project-card {
-        width: calc(50% - 10px);
-    }
-}
+
 
 @media (max-width: 690px) {
     .max-width {
