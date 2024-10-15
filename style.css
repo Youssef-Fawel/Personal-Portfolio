@@ -912,6 +912,8 @@ footer span a:hover {
 }
 
 body {
+    max-width: 100%;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
