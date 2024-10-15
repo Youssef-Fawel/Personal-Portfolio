@@ -1,16 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        const scrollUpBtn = document.querySelector('.scroll-up-btn');
+    const navbar = document.querySelector('.navbar');
+    const scrollUpBtn = document.querySelector('.scroll-up-btn');
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.navbar .menu');
 
-        console.log("ScrollY:", window.scrollY); 
+    window.addEventListener('scroll', function () {
         navbar.classList.toggle("sticky", window.scrollY > 20);
         scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
 
-    document.querySelector('.scroll-up-btn').addEventListener('click', function () {
+    scrollUpBtn.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevent event from bubbling up
+            console.log('Menu button clicked');
+            menu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                menu.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+
+        menu.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    } else {
+        console.error('Menu button or menu not found');
+    }
 
     document.querySelectorAll('.navbar .menu li a').forEach(function (item) {
         item.addEventListener('click', function (e) {
@@ -18,28 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
+                menu.classList.remove('active');
+                menuBtn.classList.remove('active');
             }
         });
-    });
-
-    const menuBtn = document.querySelector('.menu-btn');
-    const menu = document.querySelector('.navbar .menu');
-
-    if (menuBtn) {
-        menuBtn.addEventListener('click', function () {
-            console.log('Menu button clicked'); 
-            menu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    } else {
-        console.error('Menu button not found');
-    }
-
-    document.addEventListener('click', function (event) {
-        if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
-            menu.classList.remove('active');
-            menuBtn.classList.remove('active');
-        }
     });
 
     try {
