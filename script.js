@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
         const scrollUpBtn = document.querySelector('.scroll-up-btn');
+
+        console.log("ScrollY:", window.scrollY); 
         navbar.classList.toggle("sticky", window.scrollY > 20);
         scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
@@ -20,15 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".menu");
+    document.querySelector('.menu-btn').addEventListener('click', function () {
+        document.querySelector('.navbar .menu').classList.toggle("active");
+        this.classList.toggle("active");
+    });
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    menuBtn.classList.toggle("active");
-});
-    
-    
     try {
         new Typed(".typing", {
             strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
