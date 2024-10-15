@@ -107,6 +107,9 @@ section .title::after {
 .navbar.sticky {
     padding: 15px 0;
     background: #4baced;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .max-width {
