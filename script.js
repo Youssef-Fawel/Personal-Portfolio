@@ -1,20 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const scrollUpBtn = document.querySelector('.scroll-up-btn');
+
     window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        const scrollUpBtn = document.querySelector('.scroll-up-btn');
-        
-        console.log("ScrollY:", window.scrollY); 
-
-        navbar.classList.toggle("sticky", window.scrollY > 20);
-
-        scrollUpBtn.classList.toggle("show", window.scrollY > 500);
+        if (navbar) {
+            navbar.classList.toggle("sticky", window.scrollY > 20);
+        }
+        if (scrollUpBtn) {
+            scrollUpBtn.classList.toggle("show", window.scrollY > 500);
+        }
     });
-});
 
-
-    document.querySelector('.scroll-up-btn').addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (scrollUpBtn) {
+        scrollUpBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     document.querySelectorAll('.navbar .menu li a').forEach(function (item) {
         item.addEventListener('click', function (e) {
@@ -26,24 +27,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.querySelector('.menu-btn').addEventListener('click', function () {
-        document.querySelector('.navbar .menu').classList.toggle("active");
-        this.classList.toggle("active");
-    });
+    const menuBtn = document.querySelector('.menu-btn');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function () {
+            document.querySelector('.navbar .menu').classList.toggle("active");
+            this.classList.toggle("active");
+        });
+    }
 
     try {
-        new Typed(".typing", {
-            strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-
-        new Typed(".typing-2", {
-            strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
+        const typingElements = [".typing", ".typing-2"];
+        typingElements.forEach(selector => {
+            if (document.querySelector(selector)) {
+                new Typed(selector, {
+                    strings: ["Software Engineering Student", "Web Developer", "Full-Stack Developer", "Problem Solver", "Tech Enthusiast"],
+                    typeSpeed: 100,
+                    backSpeed: 60,
+                    loop: true
+                });
+            }
         });
     } catch (error) {
         console.error("Error initializing Typed.js:", error);
@@ -147,9 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    closeModal.addEventListener('click', () => {
-        modal.style.display = "none";
-    });
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    }
 
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
@@ -201,24 +205,26 @@ document.addEventListener('DOMContentLoaded', function () {
         resetAutoRotation();
     }
 
-    showSlide(currentSlide);
-    startAutoRotation();
+    if (totalSlides > 0) {
+        showSlide(currentSlide);
+        startAutoRotation();
 
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => handleManualNavigation('next'));
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => handleManualNavigation('prev'));
-    }
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-            handleManualNavigation('next');
-        } else if (e.key === 'ArrowLeft') {
-            handleManualNavigation('prev');
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => handleManualNavigation('next'));
         }
-    });
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => handleManualNavigation('prev'));
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                handleManualNavigation('next');
+            } else if (e.key === 'ArrowLeft') {
+                handleManualNavigation('prev');
+            }
+        });
+    }
 
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
@@ -238,30 +244,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
 
     const lazyImages = document.querySelectorAll('img[data-src]');
-    const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
+    if (lazyImages.length > 0) {
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
         });
-    });
 
-    lazyImages.forEach(img => lazyLoadObserver.observe(img));
+        lazyImages.forEach(img => lazyLoadObserver.observe(img));
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
