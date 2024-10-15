@@ -1,21 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const navbar = document.querySelector('.navbar');
-    const scrollUpBtn = document.querySelector('.scroll-up-btn');
-
     window.addEventListener('scroll', function () {
-        if (navbar) {
-            navbar.classList.toggle("sticky", window.scrollY > 20);
-        }
-        if (scrollUpBtn) {
-            scrollUpBtn.classList.toggle("show", window.scrollY > 500);
-        }
+        const navbar = document.querySelector('.navbar');
+        const scrollUpBtn = document.querySelector('.scroll-up-btn');
+
+        console.log("ScrollY:", window.scrollY); 
+        navbar.classList.toggle("sticky", window.scrollY > 20);
+        scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
 
-    if (scrollUpBtn) {
-        scrollUpBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+    document.querySelector('.scroll-up-btn').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     document.querySelectorAll('.navbar .menu li a').forEach(function (item) {
         item.addEventListener('click', function (e) {
@@ -28,12 +23,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.navbar .menu');
+
     if (menuBtn) {
         menuBtn.addEventListener('click', function () {
-            document.querySelector('.navbar .menu').classList.toggle("active");
-            this.classList.toggle("active");
+            console.log('Menu button clicked'); 
+            menu.classList.toggle('active');
+            this.classList.toggle('active');
         });
+    } else {
+        console.error('Menu button not found');
     }
+
+    document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+            menu.classList.remove('active');
+            menuBtn.classList.remove('active');
+        }
+    });
 
     try {
         const typingElements = [".typing", ".typing-2"];
