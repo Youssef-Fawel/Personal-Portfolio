@@ -2,11 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
         const scrollUpBtn = document.querySelector('.scroll-up-btn');
-
+        
         console.log("ScrollY:", window.scrollY); 
+
         navbar.classList.toggle("sticky", window.scrollY > 20);
+
         scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
+});
+
 
     document.querySelector('.scroll-up-btn').addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
