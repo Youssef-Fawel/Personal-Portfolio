@@ -4,21 +4,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const menu = document.querySelector('.navbar .menu');
 
+    console.log('Menu button:', menuBtn); // Debug: Check if menuBtn is found
+    console.log('Menu:', menu); // Debug: Check if menu is found
+
     window.addEventListener('scroll', function () {
         navbar.classList.toggle("sticky", window.scrollY > 20);
         scrollUpBtn.classList.toggle("show", window.scrollY > 500);
     });
 
-    scrollUpBtn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
     if (menuBtn && menu) {
+        console.log('Adding click event listener to menu button'); // Debug
         menuBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default action
             e.stopPropagation(); // Prevent event from bubbling up
-            console.log('Menu button clicked');
+            console.log('Menu button clicked'); // Debug
             menu.classList.toggle('active');
             this.classList.toggle('active');
+            console.log('Menu active:', menu.classList.contains('active')); // Debug
         });
 
         document.addEventListener('click', function (event) {
