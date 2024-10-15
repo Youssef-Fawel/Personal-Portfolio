@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+});
     document.querySelector('.menu-btn').addEventListener('click', function () {
         document.querySelector('.navbar .menu').classList.toggle("active");
         this.classList.toggle("active");
