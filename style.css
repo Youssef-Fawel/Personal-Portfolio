@@ -1265,9 +1265,20 @@ section {
     background-color: #0056b3;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .project-nav-buttons {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .project-nav-buttons .nav-button {
+        display: none !important;
+    }
+
+    #prevProject, #nextProject {
+        display: none !important;
     }
 }
 
