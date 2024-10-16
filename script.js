@@ -13,6 +13,9 @@ window.addEventListener('scroll', function () {
     scrollUpBtn.classList.toggle("show", window.scrollY > 500);
 });
 
+    scrollUpBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
     if (menuBtn && menu) {
         console.log('Adding click event listener to menu button'); 
