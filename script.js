@@ -4,23 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.menu-btn');
     const menu = document.querySelector('.navbar .menu');
 
-    console.log('Menu button:', menuBtn); // Debug: Check if menuBtn is found
-    console.log('Menu:', menu); // Debug: Check if menu is found
+    console.log('Menu button:', menuBtn); 
+    console.log('Menu:', menu); 
 
-    window.addEventListener('scroll', function () {
-        navbar.classList.toggle("sticky", window.scrollY > 20);
-        scrollUpBtn.classList.toggle("show", window.scrollY > 500);
-    });
+window.addEventListener('scroll', function () {
+    console.log('ScrollY:', window.scrollY); 
+    navbar.classList.toggle("sticky", window.scrollY > 20);
+    scrollUpBtn.classList.toggle("show", window.scrollY > 500);
+});
+
 
     if (menuBtn && menu) {
-        console.log('Adding click event listener to menu button'); // Debug
+        console.log('Adding click event listener to menu button'); 
         menuBtn.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default action
-            e.stopPropagation(); // Prevent event from bubbling up
-            console.log('Menu button clicked'); // Debug
+            e.preventDefault(); 
+            e.stopPropagation();
+            console.log('Menu button clicked'); 
             menu.classList.toggle('active');
             this.classList.toggle('active');
-            console.log('Menu active:', menu.classList.contains('active')); // Debug
+            console.log('Menu active:', menu.classList.contains('active')); 
         });
 
         document.addEventListener('click', function (event) {
