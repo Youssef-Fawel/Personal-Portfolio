@@ -141,13 +141,13 @@ window.addEventListener('scroll', function () {
         12: {
             title: "Plateforme d'e-learning (Coming Soon)",
             image: "Photos/Coming_soon.jpg", 
-            description: "Une plateforme de gestion d'apprentissage en ligne permettant aux administrateurs de gérer les formations, aux formateurs de créer et suivre le progrès des apprenants, et aux apprenants d'accéder aux contenus pédagogiques et aux évaluations. Le système inclut un tableau de bord personnalisé, des forums de discussion, et un suivi détaillé des progrès.",
+            description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
             technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Amazon S3"]
         },
         13: {
     title: "Product Management System",
     image: "Photos/product-management.png", 
-    description: "Un système complet de gestion de produits avec une interface moderne et mode sombre intégré. Cette application offre des fonctionnalités CRUD avancées pour une gestion efficace des produits, incluant le filtrage en temps réel, le tri dynamique, et la pagination intelligente. Le système permet l'édition instantanée des produits, une recherche optimisée, et s'adapte parfaitement à tous les appareils grâce à son design responsive.",
+    description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
      },
     };     
