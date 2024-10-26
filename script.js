@@ -146,7 +146,7 @@ window.addEventListener('scroll', function () {
         },
         13: {
     title: "Product Management System",
-    image: "Photos/product-management.jng", 
+    image: "Photos/product-management.png", 
     description: "Un système complet de gestion de produits avec une interface moderne et mode sombre intégré. Cette application offre des fonctionnalités CRUD avancées pour une gestion efficace des produits, incluant le filtrage en temps réel, le tri dynamique, et la pagination intelligente. Le système permet l'édition instantanée des produits, une recherche optimisée, et s'adapte parfaitement à tous les appareils grâce à son design responsive.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
      },
