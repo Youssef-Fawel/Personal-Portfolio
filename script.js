@@ -144,9 +144,9 @@ window.addEventListener('scroll', function () {
             description: "Une plateforme de gestion d'apprentissage en ligne permettant aux administrateurs de gérer les formations, aux formateurs de créer et suivre le progrès des apprenants, et aux apprenants d'accéder aux contenus pédagogiques et aux évaluations. Le système inclut un tableau de bord personnalisé, des forums de discussion, et un suivi détaillé des progrès.",
             technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Amazon S3"]
         },
-        12: {
+        13: {
     title: "Product Management System",
-    image: "Photos/product-management.jpg", 
+    image: "Photos/product-management.jng", 
     description: "Un système complet de gestion de produits avec une interface moderne et mode sombre intégré. Cette application offre des fonctionnalités CRUD avancées pour une gestion efficace des produits, incluant le filtrage en temps réel, le tri dynamique, et la pagination intelligente. Le système permet l'édition instantanée des produits, une recherche optimisée, et s'adapte parfaitement à tous les appareils grâce à son design responsive.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
      },
