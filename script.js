@@ -141,16 +141,16 @@ window.addEventListener('scroll', function () {
         12: {
             title: "Plateforme d'e-learning (Coming Soon)",
             image: "Photos/Coming_soon.jpg", 
-            description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
+            description: "An online learning management platform that allows administrators to manage courses, trainers to create and track learner progress, and learners to access educational content and assessments. The system includes a personalized dashboard, discussion forums, and detailed progress tracking.",
             technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Amazon S3"]
         },
         13: {
-    title: "Product Management System",
-    image: "Photos/product-management.png", 
-    description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
-     },
-    };     
+           title: "Product Management System",
+           image: "Photos/product-management.png", 
+           description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
+          technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
+        },
+     };     
 
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
