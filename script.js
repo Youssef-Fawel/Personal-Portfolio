@@ -140,9 +140,9 @@ window.addEventListener('scroll', function () {
         },       
         12: {
             title: "Plateforme d'e-learning (Coming Soon)",
-            image: "Photos/Coming_soon.jpg", 
-            description: "An online learning management platform that allows administrators to manage courses, trainers to create and track learner progress, and learners to access educational content and assessments. The system includes a personalized dashboard, discussion forums, and detailed progress tracking.",
-            technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Amazon S3"]
+            image: "Photos/main.jpg", 
+            description: "An online learning management platform that allows administrators to manage courses, trainers to create and track learner progress, and learners to access educational content and assessments. The system includes a personalized dashboard.",
+            technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Postman"]
         },
         13: {
            title: "Product Management System",
