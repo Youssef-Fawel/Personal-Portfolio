@@ -139,8 +139,8 @@ window.addEventListener('scroll', function () {
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"]   
         },       
         12: {
-            title: "Plateforme d'e-learning (Coming Soon)",
-            image: "Photos/main.jpg", 
+            title: "Plateforme d'e-learning",
+            image: "Photos/main.png", 
             description: "An online learning management platform that allows administrators to manage courses, trainers to create and track learner progress, and learners to access educational content and assessments. The system includes a personalized dashboard.",
             technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Postman"]
         },
