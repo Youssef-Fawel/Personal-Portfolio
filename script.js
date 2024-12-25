@@ -150,13 +150,12 @@ window.addEventListener('scroll', function () {
            description: "A comprehensive product management system with a modern interface and integrated dark mode. This application offers advanced CRUD functionalities for efficient product management, including real-time filtering, dynamic sorting, and smart pagination. The system enables instant product editing, optimized search, and perfectly adapts to all devices thanks to its responsive design.",
           technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "REST API", "JSON"]
         },
-        13: {
-    title: "Movie Management System",
-    image: "Photos/movie-.png",
-    description: "A feature-rich movie management platform that empowers users to curate their personal movie collections. Users can add new movies, mark favorites, assign ratings, and efficiently manage their library through complete CRUD operations. The platform features an advanced category-based search system, making it simple to discover and organize films. With an intuitive interface, users can seamlessly edit movie details, remove entries, and access comprehensive movie information.",
-    technologies: ["React", "Node.js", "MongoDB", "Express.js", "REST API", "JWT"]
-}
-
+        14: {
+           title: "Movie Management System",
+          image: "Photos/movie-.png",
+          description: "A feature-rich movie management platform that empowers users to curate their personal movie collections. Users can add new movies, mark favorites, assign ratings, and efficiently manage their library through complete CRUD operations. The platform features an advanced category-based search system, making it simple to discover and organize films. With an intuitive interface, users can seamlessly edit movie details, remove entries, and access comprehensive movie information.",
+          technologies: ["React", "Node.js", "MongoDB", "Express.js", "REST API", "JWT"]
+            }
      };     
 
     const modal = document.getElementById('project-modal');
