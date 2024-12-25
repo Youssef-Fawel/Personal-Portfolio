@@ -152,7 +152,7 @@ window.addEventListener('scroll', function () {
         },
         14: {
            title: "Movie Management System",
-          image: "Photos/movie-.png",
+          image: "Photos/movie.png",
           description: "A feature-rich movie management platform that empowers users to curate their personal movie collections. Users can add new movies, mark favorites, assign ratings, and efficiently manage their library through complete CRUD operations. The platform features an advanced category-based search system, making it simple to discover and organize films. With an intuitive interface, users can seamlessly edit movie details, remove entries, and access comprehensive movie information.",
           technologies: ["React", "Node.js", "MongoDB", "Express.js", "REST API", "JWT"]
             }
