@@ -141,7 +141,7 @@ window.addEventListener('scroll', function () {
         12: {
             title: "Plateforme d'e-learning",
             image: "Photos/main.png", 
-            description: "An online learning management platform that allows administrators to manage courses, trainers to create and track learner progress, and learners to access educational content and assessments. The system includes a personalized dashboard.",
+            description: "An advanced e-learning management platform designed for three user roles: Administrators, who manage courses and users; Trainers, who create courses and track learner progress; and Learners, who access educational content and complete assessments. The platform includes a personalized dashboard for a streamlined and engaging experience.",
             technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Postman"]
         },
         13: {
